@@ -18,8 +18,3 @@ include-package-data = true
 
 [tool.setuptools.package-data]
 safe_commit_guard = ["policy/*.json"]
-
-
-[tool.setuptools.packages.find]
-include = ["safe_commit_guard*"]
-exclude = ["hooks*"]
