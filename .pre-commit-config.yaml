@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: safe-commit-guard-staged
+        name: safe-commit-guard staged scan
+        entry: scg scan staged --format text
+        language: system
+        pass_filenames: false
