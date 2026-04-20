@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+remote_name=${1:-origin}
+remote_url=${2:-}
+
+# stdin format: <local_ref> <local_sha> <remote_ref> <remote_sha>
+while read -r local_ref local_sha remote_ref remote_sha; do
+  if [[ -z "${local_sha:-}" || "$local_sha" == "0000000000000000000000000000000000000000" ]]; then
+    continue
+  fi
+  scg scan pre-push --local-sha "$local_sha" --remote-sha "${remote_sha:-0000000000000000000000000000000000000000}" --format text
+done

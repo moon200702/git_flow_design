@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+MSG_FILE=${1:-.git/COMMIT_EDITMSG}
+scg scan commit-msg --msg-file "$MSG_FILE" --format text
