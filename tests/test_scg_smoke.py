@@ -29,7 +29,7 @@ class TestSCGSmoke(unittest.TestCase):
         env = os.environ.copy()
         env["PYTHONPATH"] = str(REPO_ROOT)
         return subprocess.run(
-            ["python", "-m", "safe_commit_guard.cli", *args],
+            ["python3", "-m", "safe_commit_guard.cli", *args],
             cwd=self.tmpdir,
             capture_output=True,
             text=True,
