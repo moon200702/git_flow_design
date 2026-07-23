@@ -18,7 +18,7 @@
       ▼
 [Passes All Tests] ──► Deploy to Production Cluster
 
-
+SBOM provide
 
 [Build Phase] ──► [Registry] ──► [Deploy to Sandbox/Staging] ──► [Production Live]
       │                                    │                             │
